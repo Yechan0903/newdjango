@@ -9,12 +9,12 @@ def home(request):
     count = len(blogs)
     return render(request, 'home.html', {'blogs':blogs,'count':count})
 
-def detail(request, id):
+def detail(request, id,t):
     blog = get_object_or_404(Blog, pk = id)
-    return render(request, 'detail.html', {'blog':blog})
+    return render(request, 'detail.html', {'blog':blog,'id':id,'t':t})
 
-def new(request):
-    return render(request,'new.html')
+def new(request ,a):
+    return render(request,'new.html',{'a':a})
 
 def create(request):
     new_blog = Blog()
