@@ -13,7 +13,9 @@
     <br />
     <p>{{id}}</p>
     <br />
-    <p>{{t}}</p>
+    <div><a href="{%url 'edit' id%}">수정하기</a></div>
+    <br />
+    <div><a href="{%url 'delete' id%}">삭제하기</a></div>
     <br />
     <div><a href="{%url 'home'%}">홈으로</a></div>
   </body>
