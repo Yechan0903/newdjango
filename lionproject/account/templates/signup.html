@@ -1,15 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Update Your Blog</h1>
+<h1>Sign up!</h1>
 
-<form
-  action="{%url 'update' blog.id%}"
-  method="post"
-  enctype="multipart/form-data"
->
+<form action="{%url 'signup'%}" method="post">
   {%csrf_token%}
   <p>{{form.as_p}}</p>
   <button type="submit">submit</button>
   <br />
   <div><a href="{%url 'home'%}">홈으로</a></div>
+  {%endblock%}
 </form>
-{%endblock%}

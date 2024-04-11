@@ -9,10 +9,12 @@
 <br />
 {% endif %}
 <p>{{id}}</p>
+{% if blog.author == user %}
 <br />
 <div><a href="{%url 'edit' id%}">수정하기</a></div>
 <br />
 <div><a href="{%url 'delete' id%}">삭제하기</a></div>
+{%endif%}
 <br />
 <div><a href="{%url 'home'%}">홈으로</a></div>
 {%endblock%}

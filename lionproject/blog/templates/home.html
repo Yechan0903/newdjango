@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+<p>{{user.location}}에 사는 {{user.university}}에 다니는 {{user.nickname}}</p>
+{% endif%}
 <h1>The Climb Life</h1>
 <div>
   <p>{{count}}</p>
