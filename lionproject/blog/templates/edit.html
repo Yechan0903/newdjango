@@ -1,3 +1,4 @@
+{% extends 'base.html' %} {% block content %}
 <h1>Update Your Blog</h1>
 
 <form action="{%url 'update' blog.id%}" method="post">
@@ -9,3 +10,4 @@
   <br />
   <div><a href="{%url 'home'%}">홈으로</a></div>
 </form>
+{%endblock%}
