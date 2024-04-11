@@ -7,7 +7,10 @@
   enctype="multipart/form-data"
 >
   {%csrf_token%}
-  <p>{{form.as_p}}</p>
+  <p>제목:<input type="text" name="title" value="{{blog.title}}" /></p>
+  <p>작성자: <input type="text" name="writer" value="{{blog.writer}}" /></p>
+  본문: <textarea name="body" id="" cols="30" row="10">{{blog.body}}</textarea>
+  <p>사진: <input type="file" name="image" value="{{blog.image}}" /></p>
   <button type="submit">submit</button>
   <br />
   <div><a href="{%url 'home'%}">홈으로</a></div>

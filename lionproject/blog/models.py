@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+# from django.contrib.auth.models import User
+# settings.AUTH_USER_MODEL 대신에 User 쓸수있음
 
 # Create your models here.
 class Blog(models.Model):
@@ -15,3 +17,4 @@ class Blog(models.Model):
     
     def summary(self):
         return self.body[:100]
+    
